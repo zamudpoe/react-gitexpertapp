@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en componente <GrifGridItem /> Debe de mostrar <GrifGridItem /> correctamente renderizado! 1`] = `
+<div
+  className="card animate__animated animate__zoomInDown"
+>
+  <img
+    alt="Ola K Ase?"
+    src="localhost:3000"
+  />
+  <p>
+     
+    Ola K Ase?
+     
+  </p>
+</div>
+`;

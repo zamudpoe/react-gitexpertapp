@@ -1,25 +1,21 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
+
 import { AddCategory } from './components/AddCategory'
 import { GifGrid } from './components/GifGrid'
 
 import "animate.css"
 
-const GifExpertApp = () => {
-  const [categories, setCategories] = useState(['']) 
-  /* console.log(categories); */
-  //const handleAdd = () => {
-  //  //setCategories( ['HunterXHunter', ...categories ] )
-  //  setCategories( categories => [ ...categories, 'nuevo ITEM'] )
-  //  console.log(categories);
-  //}
-
-  /* console.log(categories); */
+const GifExpertApp = ({ defaultCategory = [] }) => {
+  /* const [ categories, setCategories ] = useState( ["One Punch"] ) */
+  const [ categories, setCategories ] = useState( defaultCategory ) 
 
   return (
     <>
       <h2 className="animate__animated animate__bounce animate__delay_2s">GifExpertApp</h2>
       <hr />
 
+      {/* Le pasamos la funcion seteadora de estado "setCategories" por medio de la prop del mismo nombre */}
       <AddCategory setCategories = { setCategories } />
 
       <ol>       
@@ -32,10 +28,16 @@ const GifExpertApp = () => {
           ))
 
         } 
-      </ol>
+      </ol> 
     </>
   )
+} 
+
+/* 
+GifExpertApp.propTypes = { 
+  defaultCategory: PropTypes.string.isRequired
 }
+*/
 
 export default GifExpertApp
 

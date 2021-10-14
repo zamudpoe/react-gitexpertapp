@@ -1,4 +1,4 @@
-const getGifts = async (category) => {  
+const getGifs = async (category) => {  
     /* 01 Obtenemos los gifts */
     const GIPHY_API_Key  = "GOcWQKqeSiIiopLoNpmKczCJhvhzoyM5" 
     const limit          = 10 
@@ -24,4 +24,4 @@ const getGifts = async (category) => {
 
 }  
 
-export default getGifts
+export default getGifs
